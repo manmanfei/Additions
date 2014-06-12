@@ -104,4 +104,14 @@
     return [self stringByReplacingOccurrencesOfString:target withString:replacement];
 }
 
+// add
++ (CGSize)getStringRect:(NSString*)aString stringInSize:(CGSize)scope font:(UIFont *)font
+{
+    CGSize size;
+    NSDictionary *attribute = @{NSFontAttributeName: font};
+    size = [aString boundingRectWithSize:scope  options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    
+    return  size;
+}
+
 @end

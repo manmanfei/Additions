@@ -7,7 +7,7 @@
 //
 
 #import "UIDevice+Additions.h"
-#import "OpenUDID.h"
+
 #import <netinet/in.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 
@@ -26,7 +26,7 @@
 }
 
 + (NSString *)udid{
-    return [OpenUDID value];
+//    return [OpenUDID value];
 }
 
 + (BOOL)isNetworkReachable{

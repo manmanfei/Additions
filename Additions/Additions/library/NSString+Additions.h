@@ -26,5 +26,6 @@
 - (NSString*) replace: (NSString*) target withString: (NSString*) replacement;
 - (NSArray*) split: (NSString*) token limit: (int) maxResults;
 
-
+// add
++ (CGSize)getStringRect:(NSString*)aString stringInSize:(CGSize)scope font:(UIFont *)font;
 @end
