@@ -21,7 +21,7 @@ Additions
 	* `UIView+Additions.h`
 	* `UIColor+Additions.h`
 
-#add by hongfei
+#Add By Xiaofei
 * 增加单例宏、获取rgb颜色宏、UIViewLayout分类、NSString扩展根据内容返回高度
 	* Singleton.h
 	* UIView+ViewLayout.h		// 布局简便
