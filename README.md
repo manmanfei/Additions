@@ -24,5 +24,9 @@ Additions
 #add by hongfei
 * 增加单例宏、获取rgb颜色宏、UIViewLayout分类、NSString扩展根据内容返回高度
 	* Singleton.h
-	* UIView+ViewLayout.h
+	* UIView+ViewLayout.h		// 布局简便
+	* UIImage+Tint.h  	// 改变图片颜色
+	* UIImage+Antialiase.h 		// 图片抗锯齿
+	* UIColor+Additions.h 		// rgb颜色、iOS7扁平化颜色
+	* AppDelegate.m 	// 程序激活时XML输出层次结构
 	...
