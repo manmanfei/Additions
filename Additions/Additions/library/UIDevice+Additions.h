@@ -13,7 +13,7 @@
 + (BOOL)isNewiPad;
 + (BOOL)isiPhone5;
 + (BOOL)isiPad;
-+ (NSString *)udid;
+//+ (NSString *)udid;
 + (BOOL)isNetworkReachable;
 
 @end

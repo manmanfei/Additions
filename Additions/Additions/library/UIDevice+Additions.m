@@ -25,9 +25,9 @@
     return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
 }
 
-+ (NSString *)udid{
+//+ (NSString *)udid{
 //    return [OpenUDID value];
-}
+//}
 
 + (BOOL)isNetworkReachable{
     // Create zero addy

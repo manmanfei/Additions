@@ -7,8 +7,52 @@
 //
 
 #import "AppDelegate.h"
-
 @implementation AppDelegate
+
+#pragma mark 程序激活时xml输出层次结构
+- (NSString *)digView:(UIView *)view
+{
+    //    if ([view isKindOfClass:[UITableViewCell class]]) return @"";
+    // 1.初始化
+    //    static NSMutableString *xml = nil;
+    //    if (xml == nil) {
+    //        xml = [NSMutableString stringWithString:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"];
+    //    }
+    
+    NSMutableString *xml = [NSMutableString string];
+    
+    // 2.标签开头
+    [xml appendFormat:@"<%@ frame=\"%@\"", view.class, NSStringFromCGRect(view.frame)];
+    if (!CGPointEqualToPoint(view.bounds.origin, CGPointZero)) {
+        [xml appendFormat:@" bounds=\"%@\"", NSStringFromCGRect(view.bounds)];
+    }
+    
+    if ([view isKindOfClass:[UIScrollView class]]) {
+        UIScrollView *scroll = (UIScrollView *)view;
+        if (!UIEdgeInsetsEqualToEdgeInsets(UIEdgeInsetsZero, scroll.contentInset)) {
+            [xml appendFormat:@" contentInset=\"%@\"", NSStringFromUIEdgeInsets(scroll.contentInset)];
+        }
+    }
+    
+    // 3.判断是否要结束
+    if (view.subviews.count == 0) {
+        [xml appendString:@" />"];
+        return xml;
+    } else {
+        [xml appendString:@">"];
+    }
+    
+    // 4.遍历所有的子控件
+    for (UIView *child in view.subviews) {
+        NSString *childXml = [self digView:child];
+        [xml appendString:childXml];
+    }
+    
+    // 5.标签结尾
+    [xml appendFormat:@"</%@>", view.class];
+    
+    return xml;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -35,6 +79,10 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    NSString *xml = [self digView:self.window];
+    // yourdirectory 用户文件夹
+    [xml writeToFile:@"/Users/yourdirectory/Desktop/window.xml" atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

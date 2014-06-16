@@ -12,6 +12,7 @@
 #define NSLog(...) do{} while(0)
 #endif
 
+
 #define imageNamed(name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:nil]])
 
 #define CGRectChangeX(rect, x) (CGRectMake(x, rect.origin.y, rect.size.width, rect.size.height))
@@ -35,6 +36,7 @@
 #import "UIColor+Additions.h"
 
 #import "UIView+ViewLayout.h"
+#import "UIImage+Tint.h"
 
 // 颜色宏
 #define kGetColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]

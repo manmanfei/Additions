@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B25D307194F2EF2002E3EAA /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B25D306194F2EF2002E3EAA /* UIImage+Tint.m */; };
+		9B25D30A194F2FC2002E3EAA /* UIImage+Antialiase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B25D309194F2FC2002E3EAA /* UIImage+Antialiase.m */; };
 		AB9ABADA19499E1600DAF945 /* UIView+ViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9ABAD919499E1600DAF945 /* UIView+ViewLayout.m */; };
 		C41057F3176C680E00D46B0C /* AdditionsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C41057DF176C680E00D46B0C /* AdditionsObserver.m */; };
 		C41057F4176C680E00D46B0C /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C41057E1176C680E00D46B0C /* AudioManager.m */; };
@@ -34,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B25D305194F2EF2002E3EAA /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		9B25D306194F2EF2002E3EAA /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		9B25D308194F2FC2002E3EAA /* UIImage+Antialiase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Antialiase.h"; sourceTree = "<group>"; };
+		9B25D309194F2FC2002E3EAA /* UIImage+Antialiase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Antialiase.m"; sourceTree = "<group>"; };
 		AB9ABAD819499E1600DAF945 /* UIView+ViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewLayout.h"; sourceTree = "<group>"; };
 		AB9ABAD919499E1600DAF945 /* UIView+ViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewLayout.m"; sourceTree = "<group>"; };
 		AB9ABADB19499EDD00DAF945 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -103,6 +109,10 @@
 			children = (
 				AB9ABADB19499EDD00DAF945 /* Singleton.h */,
 				C41057DD176C680E00D46B0C /* AdditionsMacro.h */,
+				9B25D305194F2EF2002E3EAA /* UIImage+Tint.h */,
+				9B25D306194F2EF2002E3EAA /* UIImage+Tint.m */,
+				9B25D308194F2FC2002E3EAA /* UIImage+Antialiase.h */,
+				9B25D309194F2FC2002E3EAA /* UIImage+Antialiase.m */,
 				C41057DE176C680E00D46B0C /* AdditionsObserver.h */,
 				C41057DF176C680E00D46B0C /* AdditionsObserver.m */,
 				C41057E0176C680E00D46B0C /* AudioManager.h */,
@@ -258,11 +268,13 @@
 				C41057F5176C680E00D46B0C /* NSData+Additions.m in Sources */,
 				C41057FA176C680E00D46B0C /* UIScreen+Additions.m in Sources */,
 				C4A525C9176C744200CB40A9 /* UIColor+Additions.m in Sources */,
+				9B25D30A194F2FC2002E3EAA /* UIImage+Antialiase.m in Sources */,
 				C41057FB176C680E00D46B0C /* UITableView+Additions.m in Sources */,
 				C41057F6176C680E00D46B0C /* NSString+Additions.m in Sources */,
 				C41057F3176C680E00D46B0C /* AdditionsObserver.m in Sources */,
 				AB9ABADA19499E1600DAF945 /* UIView+ViewLayout.m in Sources */,
 				C41057F9176C680E00D46B0C /* UIDevice+Additions.m in Sources */,
+				9B25D307194F2EF2002E3EAA /* UIImage+Tint.m in Sources */,
 				C41057FC176C680E00D46B0C /* UIView+Additions.m in Sources */,
 				C4A525D1176C750F00CB40A9 /* NSArray+Additions.m in Sources */,
 				C4A525D2176C753600CB40A9 /* NSMutableArray+Additions.m in Sources */,
